@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArnoldC Commerce - Product Network</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Public Sans', sans-serif;
+            background-color: #f5f5f5;
+        }
+        #header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #container {
+            width: 100%;
+            height: calc(100vh - 60px);
+            background-color: #ffffff;
+        }
+        .product-info {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 300px;
+            display: none;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #ff5500;
+        }
+        .nav-links a {
+            color: white;
+            margin-left: 1.5rem;
+            text-decoration: none;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="logo">ARNOLDC COMMERCE</div>
+        <div class="nav-links">
+            <a href="#products">Products</a>
+            <a href="#cart">Cart</a>
+            <a href="#account">Account</a>
+        </div>
+    </div>
+    <div id="container"></div>
+    <div id="product-info" class="product-info">
+        <h3 id="product-name">Product Name</h3>
+        <p id="product-desc">Product description goes here</p>
+        <p id="product-price">$0.00</p>
+        <button id="add-to-cart">Add to Cart</button>
+    </div>
+
+    <script type="module">
+        import Graph from 'https://cdn.jsdelivr.net/npm/graphology/+esm';
+        import Sigma from 'https://cdn.jsdelivr.net/npm/sigma/+esm';
+        
+        // Create graph
+        const graph = new Graph();
+        
+        // Add products as nodes
+        const products = [
+            { id: 't800', label: 'T-800 Endoskeleton', price: 999999.99, x: 0, y: 0, size: 20, color: '#ff5500', 
+              description: 'Advanced cybernetic organism, Series 800, Model 101.' },
+            { id: 'cyberdyne', label: 'Cyberdyne Systems', price: 1000000.00, x: 1, y: 1, size: 25, color: '#3366cc',
+              description: 'Cutting-edge technology from the future.' },
+            { id: 'time', label: 'Time Displacer', price: 9999999.99, x: -1, y: -1, size: 30, color: '#33cc33',
+              description: 'Revolutionary time displacement equipment.' },
+        ];
+
+        // Add nodes and edges
+        products.forEach(product => {
+            graph.addNode(product.id, {
+                ...product,
+                label: product.label,
+                x: Math.random() * 10 - 5,
+                y: Math.random() * 10 - 5,
+                size: product.size,
+                color: product.color
+            });
+        });
+
+        // Add some connections
+        graph.addEdge('t800', 'cyberdyne', { size: 2, color: '#666' });
+        graph.addEdge('cyberdyne', 'time', { size: 2, color: '#666' });
+        graph.addEdge('time', 't800', { size: 2, color: '#666' });
+
+        // Initialize sigma
+        const container = document.getElementById('container');
+        const renderer = new Sigma(graph, container, {
+            renderEdgeLabels: true,
+            enableEdgeClickEvents: true,
+            enableEdgeWheel: true,
+            enableEdgeHoverEvents: true,
+            edgeReducer: (edge, data) => {
+                const res = { ...data };
+                if (renderer.getHoveredEdge() === edge) {
+                    res.color = '#ff0000';
+                    res.size = 4;
+                }
+                return res;
+            }
+        });
+
+        // Handle node clicks
+        let activeNode = null;
+        const productInfo = document.getElementById('product-info');
+        const productName = document.getElementById('product-name');
+        const productDesc = document.getElementById('product-desc');
+        const productPrice = document.getElementById('product-price');
+
+        renderer.on('clickNode', ({ node }) => {
+            const nodeData = graph.getNodeAttributes(node);
+            activeNode = node;
+            
+            // Update product info
+            productName.textContent = nodeData.label;
+            productDesc.textContent = nodeData.description;
+            productPrice.textContent = `$${nodeData.price.toLocaleString()}`;
+            productInfo.style.display = 'block';
+            
+            // Highlight the node
+            renderer.setNodeDisplayData(node, {
+                ...nodeData,
+                color: '#ff0000',
+                size: nodeData.size * 1.2
+            });
+        });
+
+        // Add to cart functionality
+        document.getElementById('add-to-cart').addEventListener('click', () => {
+            if (activeNode) {
+                const nodeData = graph.getNodeAttributes(activeNode);
+                alert(`Added ${nodeData.label} to cart!`);
+            }
+        });
+
+        // Click outside to deselect
+        renderer.on('clickStage', () => {
+            if (activeNode) {
+                const nodeData = graph.getNodeAttributes(activeNode);
+                renderer.setNodeDisplayData(activeNode, nodeData);
+                activeNode = null;
+                productInfo.style.display = 'none';
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            renderer.refresh();
+        });
+    </script>
+</body>
+</html>

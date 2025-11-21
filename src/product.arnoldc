@@ -1,0 +1,44 @@
+LISTEN TO ME VERY CAREFULLY product_menu
+I NEED YOUR CLOTHES YOUR BOOTS AND YOUR MOTORCYCLE choice
+
+    HEY CHRISTMAS TREE continue_menu
+    YOU SET US UP @I LIED
+    
+    GET TO THE CHOPPER continue_menu
+    HERE IS MY INVITATION 1
+    LET OFF SOME STEAM BENNET 0
+    ENOUGH TALK
+    
+    STICK AROUND continue_menu
+        TALK TO THE HAND ""
+        TALK TO THE HAND "PRODUCT MENU"
+        TALK TO THE HAND "1. List All Products"
+        TALK TO THE HAND "2. View Product Details"
+        TALK TO THE HAND "3. Add to Cart"
+        TALK TO THE HAND "0. Back to Main Menu"
+        
+        TALK TO THE HAND ""
+        TALK TO THE HAND "Enter your choice: "
+        GIVE THESE PEOPLE AIR
+        GET YOUR ASS TO MARS choice
+        DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
+        
+        GET TO THE CHOPPER continue_menu
+        HERE IS MY INVITATION choice
+        LET OFF SOME STEAM BENNET 0
+        ENOUGH TALK
+    CHILL
+    
+    TALK TO THE HAND ""
+    TALK TO THE HAND "Returning to main menu..."
+    
+HASTA LA VISTA, BABY
+
+LISTEN TO ME VERY CAREFULLY list_products
+    TALK TO THE HAND ""
+    TALK TO THE HAND "AVAILABLE PRODUCTS"
+    TALK TO THE HAND "1. T-800 Endoskeleton - $999,999.99"
+    TALK TO THE HAND "2. Cyberdyne Systems Model 101 - $1,000,000.00"
+    TALK TO THE HAND "3. Time Displacement Equipment - $9,999,999.99"
+    TALK TO THE HAND ""
+HASTA LA VISTA, BABY

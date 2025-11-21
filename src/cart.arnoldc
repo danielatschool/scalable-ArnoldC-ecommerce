@@ -1,0 +1,99 @@
+LISTEN TO ME VERY CAREFULLY cart_menu
+I NEED YOUR CLOTHES YOUR BOOTS AND YOUR MOTORCYCLE choice
+
+    HEY CHRISTMAS TREE continue_menu
+    YOU SET US UP @I LIED
+    
+    GET TO THE CHOPPER continue_menu
+    HERE IS MY INVITATION 1
+    LET OFF SOME STEAM BENNET 0
+    ENOUGH TALK
+    
+    STICK AROUND continue_menu
+        TALK TO THE HAND ""
+        TALK TO THE HAND "SHOPPING CART"
+        TALK TO THE HAND "============"
+        TALK TO THE HAND "1. View Cart"
+        TALK TO THE HAND "2. Add Item"
+        TALK TO THE HAND "3. Remove Item"
+        TALK TO THE HAND "4. Checkout"
+        TALK TO THE HAND "0. Back to Main Menu"
+        
+        TALK TO THE HAND ""
+        TALK TO THE HAND "Enter your choice: "
+        GIVE THESE PEOPLE AIR
+        GET YOUR ASS TO MARS choice
+        DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
+        
+        BECAUSE I'M GOING TO SAY PLEASE choice
+        BULLSHIT
+            TALK TO THE HAND ""
+            TALK TO THE HAND "YOUR CART IS EMPTY"
+            TALK TO THE HAND "Add some items to get started!"
+        YOU HAVE NO RESPECT FOR LOGIC
+        BECAUSE I'M GOING TO SAY PLEASE choice
+        BULLSHIT
+            TALK TO THE HAND ""
+            TALK TO THE HAND "ADD ITEM TO CART"
+            TALK TO THE HAND "================"
+            TALK TO THE HAND "1. T-800 Endoskeleton - $999,999.99"
+            TALK TO THE HAND "2. Cyberdyne Systems Model 101 - $1,000,000.00"
+            TALK TO THE HAND "3. Time Displacement Equipment - $9,999,999.99"
+            TALK TO THE HAND "0. Cancel"
+            
+            TALK TO THE HAND ""
+            TALK TO THE HAND "Select an item to add: "
+            GIVE THESE PEOPLE AIR
+            GET YOUR ASS TO MARS choice
+            DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
+            
+            BECAUSE I'M GOING TO SAY PLEASE choice
+            BULLSHIT
+                TALK TO THE HAND ""
+                TALK TO THE HAND "Added T-800 Endoskeleton to cart!"
+            YOU HAVE NO RESPECT FOR LOGIC
+            BECAUSE I'M GOING TO SAY PLEASE choice
+            BULLSHIT
+                TALK TO THE HAND ""
+                TALK TO THE HAND "Added Cyberdyne Systems Model 101 to cart!"
+            YOU HAVE NO RESPECT FOR LOGIC
+            BECAUSE I'M GOING TO SAY PLEASE choice
+            BULLSHIT
+                TALK TO THE HAND ""
+                TALK TO THE HAND "Added Time Displacement Equipment to cart!"
+            YOU HAVE NO RESPECT FOR LOGIC
+        YOU HAVE NO RESPECT FOR LOGIC
+        BECAUSE I'M GOING TO SAY PLEASE choice
+        BULLSHIT
+            TALK TO THE HAND ""
+            TALK TO THE HAND "REMOVE ITEM FROM CART"
+            TALK TO THE HAND "===================="
+            TALK TO THE HAND "No items in cart to remove."
+        YOU HAVE NO RESPECT FOR LOGIC
+        BECAUSE I'M GOING TO SAY PLEASE choice
+        BULLSHIT
+            TALK TO THE HAND ""
+            TALK TO THE HAND "CHECKOUT"
+            TALK TO THE HAND "======="
+            TALK TO THE HAND "Your total is: $0.00"
+            TALK TO THE HAND ""
+            TALK TO THE HAND "Thank you for your purchase!"
+            TALK TO THE HAND "Your order will be delivered shortly."
+        YOU HAVE NO RESPECT FOR LOGIC
+        BECAUSE I'M GOING TO SAY PLEASE choice
+        BULLSHIT
+            TALK TO THE HAND ""
+            TALK TO THE HAND "Returning to main menu..."
+            GET TO THE CHOPPER continue_menu
+            HERE IS MY INVITATION @I LIED
+            ENOUGH TALK
+        YOU HAVE NO RESPECT FOR LOGIC
+        
+        TALK TO THE HAND ""
+        TALK TO THE HAND "Press Enter to continue..."
+        GIVE THESE PEOPLE AIR
+        GET YOUR ASS TO MARS choice
+        DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
+    CHILL
+    
+HASTA LA VISTA, BABY

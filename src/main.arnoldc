@@ -1,0 +1,237 @@
+IT'S SHOWTIME
+
+    HEY CHRISTMAS TREE welcome
+    YOU SET US UP @NO PROBLEMO
+    HEY CHRISTMAS TREE choice
+    YOU SET US UP 0
+    HEY CHRISTMAS TREE is_logged_in
+    YOU SET US UP @I LIED
+    HEY CHRISTMAS TREE current_user
+    YOU SET US UP "Guest"
+    
+    TALK TO THE HAND "WELCOME TO ARNOLD COMMERCE"
+    TALK TO THE HAND "======================="
+    
+    STICK AROUND welcome
+        TALK TO THE HAND ""
+        TALK TO THE HAND "MAIN MENU"
+        TALK TO THE HAND "1. View Products"
+        TALK TO THE HAND "2. View Cart"
+        
+        GET TO THE CHOPPER choice
+        HERE IS MY INVITATION is_logged_in
+        LET OFF SOME STEAM BENNET @NO PROBLEMO
+        ENOUGH TALK
+        
+        BECAUSE I'M GOING TO SAY PLEASE choice
+        BULLSHIT
+            TALK TO THE HAND "3. My Account"
+            TALK TO THE HAND "4. Logout"
+        YOU HAVE NO RESPECT FOR LOGIC
+        BECAUSE I'M GOING TO SAY PLEASE is_logged_in
+        BULLSHIT
+            TALK TO THE HAND "3. Login"
+            TALK TO THE HAND "4. Register"
+        YOU HAVE NO RESPECT FOR LOGIC
+        
+        TALK TO THE HAND "0. Exit"
+        TALK TO THE HAND ""
+        TALK TO THE HAND "Enter your choice: "
+        GIVE THESE PEOPLE AIR
+        GET YOUR ASS TO MARS choice
+        DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
+        
+        /* Handle menu choices */
+        BECAUSE I'M GOING TO SAY PLEASE choice
+        BULLSHIT
+            TALK TO THE HAND ""
+            INCLUDE "src/products/products.arnoldc"
+            DO IT NOW list_products
+            TALK TO THE HAND ""
+            TALK TO THE HAND "Enter product number to view details (or 0 to go back): "
+            GIVE THESE PEOPLE AIR
+            GET YOUR ASS TO MARS choice
+            DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
+            
+            GET TO THE CHOPPER choice
+            HERE IS MY INVITATION choice
+            LET OFF SOME STEAM BENNET 0
+            ENOUGH TALK
+            
+            BECAUSE I'M GOING TO SAY PLEASE choice
+            BULLSHIT
+                INCLUDE "src/products/products.arnoldc"
+                DO IT NOW get_product choice
+                TALK TO THE HAND ""
+                TALK TO THE HAND "1. Add to Cart"
+                TALK TO THE HAND "0. Back to Products"
+                TALK TO THE HAND ""
+                TALK TO THE HAND "Enter your choice: "
+                GIVE THESE PEOPLE AIR
+                GET YOUR ASS TO MARS choice
+                DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
+                
+                BECAUSE I'M GOING TO SAY PLEASE choice
+                BULLSHIT
+                    TALK TO THE HAND ""
+                    TALK TO THE HAND "Enter quantity: "
+                    GIVE THESE PEOPLE AIR
+                    GET YOUR ASS TO MARS quantity
+                    DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
+                    
+                    INCLUDE "src/cart/cart.arnoldc"
+                    DO IT NOW add_to_cart current_user choice quantity
+                    TALK TO THE HAND ""
+                    TALK TO THE HAND "Item added to cart!"
+                    TALK TO THE HAND "Press Enter to continue..."
+                    GIVE THESE PEOPLE AIR
+                    GET YOUR ASS TO MARS choice
+                    DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
+                YOU HAVE NO RESPECT FOR LOGIC
+            YOU HAVE NO RESPECT FOR LOGIC
+        YOU HAVE NO RESPECT FOR LOGIC
+        BECAUSE I'M GOING TO SAY PLEASE choice
+        BULLSHIT
+            INCLUDE "src/cart/cart.arnoldc"
+            DO IT NOW view_cart current_user
+            TALK TO THE HAND ""
+            TALK TO THE HAND "1. Checkout"
+            TALK TO THE HAND "2. Remove Item"
+            TALK TO THE HAND "0. Back to Main Menu"
+            TALK TO THE HAND ""
+            TALK TO THE HAND "Enter your choice: "
+            GIVE THESE PEOPLE AIR
+            GET YOUR ASS TO MARS choice
+            DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
+        YOU HAVE NO RESPECT FOR LOGIC
+        BECAUSE I'M GOING TO SAY PLEASE choice
+        BULLSHIT
+            BECAUSE I'M GOING TO SAY PLEASE is_logged_in
+            BULLSHIT
+                TALK TO THE HAND ""
+                TALK TO THE HAND "ACCOUNT MENU"
+                TALK TO THE HAND "============"
+                TALK TO THE HAND "1. View Profile"
+                TALK TO THE HAND "2. Order History"
+                TALK TO THE HAND "3. Change Password"
+                TALK TO THE HAND "0. Back to Main Menu"
+                TALK TO THE HAND ""
+                TALK TO THE HAND "Enter your choice: "
+                GIVE THESE PEOPLE AIR
+                GET YOUR ASS TO MARS choice
+                DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
+            YOU HAVE NO RESPECT FOR LOGIC
+            BECAUSE I'M GOING TO SAY PLEASE is_logged_in
+            BULLSHIT
+                TALK TO THE HAND ""
+                TALK TO THE HAND "LOGIN"
+                TALK TO THE HAND "====="
+                TALK TO THE HAND "Username: "
+                GIVE THESE PEOPLE AIR
+                GET YOUR ASS TO MARS username
+                DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
+                
+                TALK TO THE HAND "Password: "
+                GIVE THESE PEOPLE AIR
+                GET YOUR ASS TO MARS password
+                DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
+                
+                INCLUDE "src/auth/auth.arnoldc"
+                DO IT NOW login_user username password
+                
+                GET TO THE CHOPPER is_logged_in
+                HERE IS MY INVITATION @NO PROBLEMO
+                ENOUGH TALK
+                
+                GET TO THE CHOPPER current_user
+                HERE IS MY INVITATION username
+                ENOUGH TALK
+                
+                TALK TO THE HAND ""
+                TALK TO THE HAND "Login successful! Welcome, "
+                TALK TO THE HAND: username
+                TALK TO THE HAND "Press Enter to continue..."
+                GIVE THESE PEOPLE AIR
+                GET YOUR ASS TO MARS choice
+                DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
+            YOU HAVE NO RESPECT FOR LOGIC
+        YOU HAVE NO RESPECT FOR LOGIC
+        BECAUSE I'M GOING TO SAY PLEASE choice
+        BULLSHIT
+            BECAUSE I'M GOING TO SAY PLEASE is_logged_in
+            BULLSHIT
+                TALK TO THE HAND ""
+                TALK TO THE HAND "Logging out..."
+                GET TO THE CHOPPER is_logged_in
+                HERE IS MY INVITATION @I LIED
+                ENOUGH TALK
+                
+                GET TO THE CHOPPER current_user
+                HERE IS MY INVITATION "Guest"
+                ENOUGH TALK
+                
+                TALK TO THE HAND "You have been logged out."
+                TALK TO THE HAND "Press Enter to continue..."
+                GIVE THESE PEOPLE AIR
+                GET YOUR ASS TO MARS choice
+                DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
+            YOU HAVE NO RESPECT FOR LOGIC
+            BECAUSE I'M GOING TO SAY PLEASE is_logged_in
+            BULLSHIT
+                TALK TO THE HAND ""
+                TALK TO THE HAND "REGISTER"
+                TALK TO THE HAND "========"
+                TALK TO THE HAND "Choose a username: "
+                GIVE THESE PEOPLE AIR
+                GET YOUR ASS TO MARS username
+                DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
+                
+                TALK TO THE HAND "Choose a password: "
+                GIVE THESE PEOPLE AIR
+                GET YOUR ASS TO MARS password
+                DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
+                
+                TALK TO THE HAND "Confirm password: "
+                GIVE THESE PEOPLE AIR
+                GET YOUR ASS TO MARS confirm_password
+                DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
+                
+                GET TO THE CHOPPER choice
+                HERE IS MY INVITATION password
+                YOU ARE NOT YOU YOU ARE ME confirm_password
+                ENOUGH TALK
+                
+                BECAUSE I'M GOING TO SAY PLEASE choice
+                BULLSHIT
+                    TALK TO THE HAND ""
+                    TALK TO THE HAND "Passwords do not match!"
+                YOU HAVE NO RESPECT FOR LOGIC
+                BECAUSE I'M GOING TO SAY PLEASE choice
+                BULLSHIT
+                    INCLUDE "src/auth/auth.arnoldc"
+                    DO IT NOW register_user username password
+                    
+                    TALK TO THE HAND ""
+                    TALK TO THE HAND "Registration successful! Please log in."
+                    TALK TO THE HAND "Press Enter to continue..."
+                    GIVE THESE PEOPLE AIR
+                    GET YOUR ASS TO MARS choice
+                    DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
+                YOU HAVE NO RESPECT FOR LOGIC
+            YOU HAVE NO RESPECT FOR LOGIC
+        YOU HAVE NO RESPECT FOR LOGIC
+        BECAUSE I'M GOING TO SAY PLEASE choice
+        BULLSHIT
+            TALK TO THE HAND ""
+            TALK TO THE HAND "Exiting..."
+            GET TO THE CHOPPER welcome
+            HERE IS MY INVITATION @I LIED
+            ENOUGH TALK
+        YOU HAVE NO RESPECT FOR LOGIC
+    CHILL
+    
+    TALK TO THE HAND ""
+    TALK TO THE HAND "Thank you for shopping with Arnold Commerce!"
+    TALK TO THE HAND "Hasta la vista, baby!"
+    
+YOU HAVE BEEN TERMINATED

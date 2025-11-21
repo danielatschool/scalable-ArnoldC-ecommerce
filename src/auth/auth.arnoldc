@@ -1,0 +1,32 @@
+LISTEN TO ME VERY CAREFULLY register_user
+I NEED YOUR CLOTHES YOUR BOOTS AND YOUR MOTORCYCLE username
+I NEED YOUR CLOTHES YOUR BOOTS AND YOUR MOTORCYCLE password
+
+    HEY CHRISTMAS TREE result
+    YOU SET US UP @I LIED
+    
+    /* In a real app, we'd store this in a database */
+    TALK TO THE HAND "User registered successfully!"
+    
+    GET TO THE CHOPPER result
+    HERE IS MY INVITATION @NO PROBLEMO
+    ENOUGH TALK
+
+HASTA LA VISTA, BABY
+
+LISTEN TO ME VERY CAREFULLY login_user
+I NEED YOUR CLOTHES YOUR BOOTS AND YOUR MOTORCYCLE username
+I NEED YOUR CLOTHES YOUR BOOTS AND YOUR MOTORCYCLE password
+
+    /* In a real app, we'd verify credentials */
+    TALK TO THE HAND "Login successful! Welcome back, "
+    TALK TO THE HAND: username
+    
+    HEY CHRISTMAS TREE token
+    GET TO THE CHOPPER token
+    HERE IS MY INVITATION "dummy_token_"
+    GET UP token
+    HERE IS MY INVITATION username
+    ENOUGH TALK
+
+HASTA LA VISTA, BABY

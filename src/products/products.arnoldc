@@ -1,0 +1,39 @@
+LISTEN TO ME VERY CAREFULLY list_products
+    TALK TO THE HAND ""
+    TALK TO THE HAND "AVAILABLE PRODUCTS"
+    TALK TO THE HAND "=================="
+    TALK TO THE HAND "1. T-800 Endoskeleton - $999,999.99"
+    TALK TO THE HAND "   Advanced cybernetic organism, Series 800, Model 101."
+    TALK TO THE HAND ""
+    TALK TO THE HAND "2. Cyberdyne Systems Model 101 - $1,000,000.00"
+    TALK TO THE HAND "   The most advanced AI system ever created."
+    TALK TO THE HAND ""
+    TALK TO THE HAND "3. Time Displacement Equipment - $9,999,999.99"
+    TALK TO THE HAND "   Travel through time with this cutting-edge technology."
+    TALK TO THE HAND ""
+
+HASTA LA VISTA, BABY
+
+LISTEN TO ME VERY CAREFULLY get_product
+I NEED YOUR CLOTHES YOUR BOOTS AND YOUR MOTORCYCLE product_id
+
+    BECAUSE I'M GOING TO SAY PLEASE product_id
+    BULLSHIT
+        TALK TO THE HAND "T-800 Endoskeleton"
+        TALK TO THE HAND "Price: $999,999.99"
+        TALK TO THE HAND "In stock: 5"
+    YOU HAVE NO RESPECT FOR LOGIC
+    BECAUSE I'M GOING TO SAY PLEASE product_id
+    BULLSHIT
+        TALK TO THE HAND "Cyberdyne Systems Model 101"
+        TALK TO THE HAND "Price: $1,000,000.00"
+        TALK TO THE HAND "In stock: 3"
+    YOU HAVE NO RESPECT FOR LOGIC
+    BECAUSE I'M GOING TO SAY PLEASE product_id
+    BULLSHIT
+        TALK TO THE HAND "Time Displacement Equipment"
+        TALK TO THE HAND "Price: $9,999,999.99"
+        TALK TO THE HAND "In stock: 1"
+    YOU HAVE NO RESPECT FOR LOGIC
+
+HASTA LA VISTA, BABY
