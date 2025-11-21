@@ -1,5 +1,6 @@
 IT'S SHOWTIME
 
+    // 🚀🎯📊 Initialize main program flags and variables
     HEY CHRISTMAS TREE welcome
     YOU SET US UP @NO PROBLEMO
     HEY CHRISTMAS TREE choice
@@ -9,57 +10,71 @@ IT'S SHOWTIME
     HEY CHRISTMAS TREE current_user
     YOU SET US UP "Guest"
     
+    // 👋🎉📱 Display welcome message and main menu
     TALK TO THE HAND "WELCOME TO ARNOLD COMMERCE"
     TALK TO THE HAND "======================="
     
     STICK AROUND welcome
         TALK TO THE HAND ""
+        // 📋🔍🔄 Display main menu options
         TALK TO THE HAND "MAIN MENU"
         TALK TO THE HAND "1. View Products"
         TALK TO THE HAND "2. View Cart"
         
+        // 🔒👤🔄 Check if user is logged in to show appropriate menu options
         GET TO THE CHOPPER choice
         HERE IS MY INVITATION is_logged_in
         LET OFF SOME STEAM BENNET @NO PROBLEMO
         ENOUGH TALK
         
+        // 🔄👥🎭 Show different menu options based on login status
         BECAUSE I'M GOING TO SAY PLEASE choice
         BULLSHIT
+            // 👤🔐💼 Show account options for logged-in users
             TALK TO THE HAND "3. My Account"
             TALK TO THE HAND "4. Logout"
         YOU HAVE NO RESPECT FOR LOGIC
+        // 👋🔑📝 Show login/register options for guests
         BECAUSE I'M GOING TO SAY PLEASE is_logged_in
         BULLSHIT
             TALK TO THE HAND "3. Login"
             TALK TO THE HAND "4. Register"
         YOU HAVE NO RESPECT FOR LOGIC
         
+        // ⌨️📥🔢 Get user input for menu selection
         TALK TO THE HAND "0. Exit"
         TALK TO THE HAND ""
         TALK TO THE HAND "Enter your choice: "
         GIVE THESE PEOPLE AIR
+        // 📥🔢💾 Read user input into choice variable
         GET YOUR ASS TO MARS choice
         DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
         
-        /* Handle menu choices */
+        // Handle menu selection
         BECAUSE I'M GOING TO SAY PLEASE choice
         BULLSHIT
+            // 📦👀📋 Display product listing
             TALK TO THE HAND ""
             INCLUDE "src/products/products.arnoldc"
             DO IT NOW list_products
             TALK TO THE HAND ""
+            // ❓🛍️🔍 Prompt for product selection
             TALK TO THE HAND "Enter product number to view details (or 0 to go back): "
+            // 🖱️📥🛒 Get product selection from user
             GIVE THESE PEOPLE AIR
             GET YOUR ASS TO MARS choice
             DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
             
+            // 🔙🏠❓ Check if user wants to go back to main menu
             GET TO THE CHOPPER choice
             HERE IS MY INVITATION choice
             LET OFF SOME STEAM BENNET 0
             ENOUGH TALK
             
+            // 🛍️✅👆 If user selected a product (not 0)
             BECAUSE I'M GOING TO SAY PLEASE choice
             BULLSHIT
+                // 📋🔍💡 Show product details and options
                 INCLUDE "src/products/products.arnoldc"
                 DO IT NOW get_product choice
                 TALK TO THE HAND ""
@@ -71,39 +86,50 @@ IT'S SHOWTIME
                 GET YOUR ASS TO MARS choice
                 DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
                 
+                // 🛒➕✅ Handle Add to Cart selection
                 BECAUSE I'M GOING TO SAY PLEASE choice
                 BULLSHIT
+                    // 🔢📥➕ Get quantity from user
                     TALK TO THE HAND ""
                     TALK TO THE HAND "Enter quantity: "
                     GIVE THESE PEOPLE AIR
+                    // 🔢📥🛒 Read quantity and add item to cart
                     GET YOUR ASS TO MARS quantity
                     DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
                     
+                    // 🛒➕📦 Add selected product to cart
                     INCLUDE "src/cart/cart.arnoldc"
                     DO IT NOW add_to_cart current_user choice quantity
+                    // ✅🎉⏳ Show success message and wait for user to continue
                     TALK TO THE HAND ""
                     TALK TO THE HAND "Item added to cart!"
                     TALK TO THE HAND "Press Enter to continue..."
                     GIVE THESE PEOPLE AIR
+                    // ⏳⌨️⏯️ Wait for user to press Enter
                     GET YOUR ASS TO MARS choice
                     DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
                 YOU HAVE NO RESPECT FOR LOGIC
             YOU HAVE NO RESPECT FOR LOGIC
         YOU HAVE NO RESPECT FOR LOGIC
+        // 🛒👀🔢 Handle View Cart selection (menu option 2)
         BECAUSE I'M GOING TO SAY PLEASE choice
         BULLSHIT
+            // 🛒📋👀 Display current cart contents
             INCLUDE "src/cart/cart.arnoldc"
             DO IT NOW view_cart current_user
             TALK TO THE HAND ""
+            // 🛒⚙️📋 Show cart options
             TALK TO THE HAND "1. Checkout"
             TALK TO THE HAND "2. Remove Item"
             TALK TO THE HAND "0. Back to Main Menu"
             TALK TO THE HAND ""
+            // 🖱️❓🔘 Get user's cart action
             TALK TO THE HAND "Enter your choice: "
             GIVE THESE PEOPLE AIR
             GET YOUR ASS TO MARS choice
             DO IT NOW I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
         YOU HAVE NO RESPECT FOR LOGIC
+        // Handle My Account selection (menu option 3)
         BECAUSE I'M GOING TO SAY PLEASE choice
         BULLSHIT
             BECAUSE I'M GOING TO SAY PLEASE is_logged_in
